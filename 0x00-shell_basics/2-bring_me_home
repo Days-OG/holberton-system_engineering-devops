@@ -1,3 +1,2 @@
 #!/bin/bash
-ruta=echo $HOME
-cd "$ruta"
+cd "$HOME"
