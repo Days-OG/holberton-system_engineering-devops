@@ -1,3 +1,0 @@
-#!/bin/bash
-alias name="ls"
-alias value="rm *"
