@@ -1,2 +1,2 @@
 #!/bin/bash
-echo hellop "${USER}"
+echo hello "${USER}"
