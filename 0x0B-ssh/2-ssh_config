@@ -1,0 +1,60 @@
+# This is the ssh client system-wide configuration file.
+# see ssh_config for more information. this file provides defaults for user
+# the values can be changed  in per-user configuration files
+# or on the command line.
+
+# configuration data is parsed as follows:
+# 1- command line options
+# 2- user-specific file
+# 3- system-wide file
+# any configuration value is only changed the first time it is set.
+# thus, host-specific definitions should be at the beginning of the
+# configuation file and defaults at the end
+
+# site-wide defaults for some commonly use options. for a comprehensive
+# list of available options their meanings and defaults
+# see the ssh_config man page
+
+# Host *
+# ForwardAgent no
+# Forwardx11 no
+# Forwardx11trusted yes
+# RhostsRSAAuthentication no
+# RSAAuthentication yes
+# passwordAuthentication yes
+  passwordAuthentication no
+# HostbaseAuthentication no
+# GSSAPIAuthentication no
+# GSSAPIDelegateCredentials no
+# GASSAPIKeyExchange no
+# GSSAPITrustDNS no
+# BatchMode no
+# CheckHostIP yes
+# AddressFamily any
+# ConnectTimeout 0
+# StrictHostKeyChecking ask
+# IdentityFile ~/.ssh/identity
+# IdentityFile ~/.ssh/id_rsa
+# IdentityFile ~/.ssh/id_dsa
+# IdentityFile ~/.ssh/id_ecdsa
+# IdentityFile ~/.ssh/id_ed25519
+  IdentityFile ~/.ssh/school
+# Port 22
+# Protocol 2
+# Cipher 3des
+# Ciphers aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128, aes128-cbc,3des-cbc
+# MACs hmac-md5,hmac-sha1,umac-64@openssh.com,hmac-ripemd160
+# EscapeChar ~
+# Tunnel no
+# TunnelDevice any:any
+# PermitLocalCommand no
+# VisualHostKey no
+# ProxyCommand ssh -q -W %h:%p gateway.example.com
+# RekeyLimit 1G 1h
+  SendEnv LANG LC_*
+  HashKnownHost yes
+GSSAPIAuthentication yes
+#
+# Google Compute Engine times out connections after 10 minutes of inactivity
+# Keep alive ssh connections by sending a packet every 2 min
+  ServerAliveInternal 120
