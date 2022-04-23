@@ -1,6 +1,6 @@
 # Kill a process
 
-exec { 'pkill killmenoow':
+exec { 'pkill killmenow':
   path    => '/usr/sbin:/usr/bin:/sbin:/bin',
   returns => [0, 1],
 }
