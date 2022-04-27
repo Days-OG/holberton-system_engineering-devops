@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# This script displaying in 4th 9th 17th loop iteration "bad luck from China", "bad luck from Japan", "bad luck from Italy", other iterations displaying number
+
+i=0
+while (( i++ < 20 ))
+do
+  echo "$((i))"
+  case "$((i))" in
+	  4)
+		  echo 'bad luck from China'
+		  ;;
+	  9)
+		  echo 'bad luck from Japan'
+		  ;;
+	  17)
+		  echo 'bad luck from Italy'
+		  ;;
+	  esac
+done
