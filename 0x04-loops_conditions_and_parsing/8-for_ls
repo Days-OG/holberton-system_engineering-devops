@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Displaying content of the current directory in list format
+
+shopt -s nullglob
+
+for file in *
+do
+  echo "${file#'-}"
+done
