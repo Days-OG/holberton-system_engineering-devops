@@ -5,5 +5,5 @@ shopt -s nullglob
 
 for file in *
 do
-  echo "${file#'-}"
+  echo "${file#*-}"
 done
